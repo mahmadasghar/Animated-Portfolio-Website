@@ -7,7 +7,6 @@
     font-family: 'Poppins', sans-serif;
 }
 body{
-    background: #081b29;
     color: #ededed;
 }
 .header{
@@ -42,6 +41,9 @@ body{
 }
 .home{
     height: 100vh;
+    background: url(home.jpg),no-repeat;
+    background-position: center;
+    background-size: cover;
     display: flex;
     align-items: center;
     padding: 0 10%;
@@ -119,7 +121,6 @@ body{
     position: absolute;
     bottom: 40px;
     width: 170px;
-    /* background: red; */
     display: flex;
     justify-content: space-between;
 }
@@ -134,4 +135,38 @@ body{
     border: 2px solid #00abf0;
     border-radius: 50%;
     text-decoration: none;
+    overflow: hidden;
+    color: #00abf0;
+    z-index: 1;
+    transition: 0.5s;
+}
+.home-sci a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00abf0;
+    z-index: -1;
+    transition: 0.5s;
+}
+.home-sci a:hover{
+    color: #081b29;
+}
+.home-sci a:hover::before{
+    width: 100%;
+}
+.img-hover{
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 500px;
+    height: 100%;
+    background: transparent;
+    transition: 3s;
+}
+.img-hover:hover{
+    background: #081b29;
+    opacity: .8;
 }
